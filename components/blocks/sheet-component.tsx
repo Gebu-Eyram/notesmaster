@@ -5,9 +5,9 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "../ui/button";
 const navLinks = [
   {
-    title: "Workspace",
+    title: "Dashboard",
     icon: Library,
-    href: "/workspace",
+    href: "/dashboard",
   },
   {
     title: "Upgrade",
@@ -22,9 +22,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Coins, Library, Menu } from "lucide-react";
+import { Coins, HomeIcon, Library, Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { DialogTitle } from "@radix-ui/react-dialog";
+import Home from "@/app/page";
+import Image from "next/image";
+import UploadPdfDialog from "./upload-pdf-dialog";
 
 const SheetComponent = () => {
   const pathname = usePathname();
@@ -36,8 +40,24 @@ const SheetComponent = () => {
           <span className="sr-only">Toggle navigation menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="flex flex-col">
+      <SheetContent side="left" className="flex flex-col overflow-auto">
+        <DialogTitle className="text-2xl hidden font-bold">
+          Notesmaster AI Sheet
+        </DialogTitle>
+        <div className="my-4 border-b pb-2">
+          <Link href="/" className="flex items-center gap-2  font-semibold">
+            <Image
+              src={"/pencil.png"}
+              height={20}
+              width={20}
+              alt="logo"
+              className="h-6 w-6"
+            />
+            <span className="font-bold lg:text-lg">Notesmaster AI</span>
+          </Link>
+        </div>
         <nav className="flex flex-col mt-8 items-start gap-2 w-full font-medium">
+          <UploadPdfDialog />
           {navLinks.map((link, index) => (
             <Link
               key={index}

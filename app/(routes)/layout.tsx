@@ -4,13 +4,10 @@ import React from "react";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
-      <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
+    <div className="h-full">
+      <div className="lg:grid h-screen w-full lg:grid-cols-[230px_1fr]">
         <Sidebar />
-        <div className="h-screen">
-          <Header />
-          {children}
-        </div>
+        <div className="h-screen">{children}</div>
       </div>
     </div>
   );

@@ -22,6 +22,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import SheetComponent from "@/components/blocks/sheet-component";
+import Header from "@/components/blocks/header";
 
 export const description =
   "A dashboard for viewing, adding, and managing your notes. We're building a note taking app with AI capabilities.";
@@ -33,6 +34,7 @@ export const metadata = {
 const Dashboard = () => {
   return (
     <div className="flex flex-col ">
+      <Header />
       <main className="flex flex-1 h-full  flex-col gap-4 p-4 lg:gap-6 lg:p-6">
         <div className="flex items-center">
           <h1 className="text-lg font-semibold md:text-2xl">Dashboard</h1>

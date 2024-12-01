@@ -7,7 +7,7 @@ body {
 }
 /* Basic editor styles */
 
-tiptap {
+.tiptap {
   :first-child {
     margin-top: 0;
   }
@@ -115,6 +115,30 @@ tiptap {
     pointer-events: none;
   }
 }
+
+#editor table {
+  border: 1px solid;
+  max-width: 100%;
+  margin: 1rem 0;
+}
+#editor th {
+  border: 1px solid;
+}
+#editor tr {
+  border: 1px solid;
+}
+#editor td {
+  border: 1px solid;
+  overflow-x: auto;
+  text-wrap: wrap;
+}
+#editor ul li {
+  list-style: disc;
+}
+#editor ol li {
+  list-style: decimal;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

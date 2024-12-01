@@ -25,11 +25,11 @@ const page = () => {
   return (
     <div className="h-screen w-full max-h-screen overflow-hidden">
       <Header />
-      <div className=" lg:grid grid-cols-2 h-full">
-        <div className="h-full">
+      <div className=" grid lg:grid-cols-2 h-full">
+        <div className="h-full ">
           <TextEditor />
         </div>
-        <div className="h-full">
+        <div className="overflow-auto ">
           <PdfViewer fileUrl={fileInfo?.fileUrl} />
         </div>
       </div>

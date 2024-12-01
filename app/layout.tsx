@@ -6,7 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import Provider from "./provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
-
+import "simplebar-react/dist/simplebar.min.css";
 const sora = Sora({
   subsets: ["latin"],
 });
